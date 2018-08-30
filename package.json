@@ -1,0 +1,42 @@
+{
+    "title": "Stellaxius - Landing Pages Templates",
+    "name": "stellaxius-lp-templates",
+    "version": "1.0.0",
+    "description": "Templates for Stellaxius page.",
+    "keywords": [
+        "css",
+        "sass",
+        "html",
+        "responsive",
+        "theme",
+        "template"
+    ],
+    "homepage": "https://www.stellaxius.com/",
+    "bugs": {
+        "url": "https://github.com/alexandrecgd/lp-templates-stellaxius/issues",
+        "email": "alexandrecgduarte@gmail.com"
+    },
+    "license": "MIT",
+    "author": "Start Bootstrap",
+    "contributors": [
+        "David Miller (http://davidmiller.io/)"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/alexandrecgd/lp-templates-stellaxius.git"
+    },
+    "dependencies": {
+        "bootstrap": "^4.1.3",
+        "font-awesome": "4.7.0",
+        "jquery": "3.3.1",
+        "sshpk": "^1.14.2"
+    },
+    "devDependencies": {
+        "browser-sync": "^2.24.6",
+        "gulp": "^3.9.1",
+        "gulp-clean-css": "^3.10.0",
+        "gulp-rename": "^1.4.0",
+        "gulp-sass": "4.0.1",
+        "gulp-uglify": "^3.0.1"
+    }
+}
