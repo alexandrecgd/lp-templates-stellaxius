@@ -1,5 +1,5 @@
 .section-gap {
-	padding: 120px 0;
+	padding: 80px 0;
 }
 .section-title {
 	padding-bottom: 30px;
@@ -23,16 +23,15 @@
 
 
 .p1-gradient-bg {
-	background-image: -moz-linear-gradient( 0deg, rgb(244,15,104) 0%, rgb(248,110,61) 55%, rgb(251,205,17) 100%);
-	background-image: -webkit-linear-gradient( 0deg, rgb(244,15,104) 0%, rgb(248,110,61) 55%, rgb(251,205,17) 100%);
-	background-image: -ms-linear-gradient( 0deg, rgb(244,15,104) 0%, rgb(248,110,61) 55%, rgb(251,205,17) 100%);
+	background-image: -moz-linear-gradient(45deg,#ff416c -1%,#ff416c 0,#8c2424 100%);
+	background-image: -webkit-linear-gradient(45deg,#ff416c -1%,#ff416c 0,#8c2424 100%);
+	background-image: -ms-linear-gradient(45deg,#ff416c -1%,#ff416c 0,#8c2424 100%);
 }
 
 .p2-gradient-bg {
-	background-image: -moz-linear-gradient( 0deg, rgb(244,15,104) 0%, rgb(248,110,61) 55%, rgb(251,205,17) 100%);
-	background-image: -webkit-linear-gradient( 0deg, rgb(244,15,104) 0%, rgb(248,110,61) 55%, rgb(251,205,17) 100%);
-	background-image: -ms-linear-gradient( 0deg, rgb(244,15,104) 0%, rgb(248,110,61) 55%, rgb(251,205,17) 100%);
-	opacity:.5
+	background-image: -moz-linear-gradient(-45deg, rgba(0,0,0,0.81) 0%, rgba(0,0,0,0.24) 100%);
+	background-image: -webkit-linear-gradient(-45deg, rgba(0,0,0,0.81) 0%, rgba(0,0,0,0.24) 100%);
+	background-image: -ms-linear-gradient(-45deg, rgba(0,0,0,0.81) 0%, rgba(0,0,0,0.24) 100%);
 }
 
 
@@ -50,7 +49,7 @@
 	line-height: 42px;
 	padding-left: 30px;
 	padding-right: 60px;
-	border-radius: 25px;
+	border-radius: 5px;
 	@extend .p1-gradient-bg;
 	border: none;
 	color: $white;
@@ -120,7 +119,7 @@
 }
 
 .banner-area {
-	background:url(../img/header-bg.jpg) no-repeat center center/cover;
+	background:url(../img/header-bg.png) no-repeat center center/cover;
 	.fullscreen {
 		@include media-breakpoint-down (sm) {
 			height: 700px !important;
@@ -133,9 +132,11 @@
 	}
 }
 .banner-content {
+	margin: 0 auto;
+    text-align: center;
 	h1 {
 		color:$white;
-		font-size: 72px;
+		font-size: 52px;
 		font-weight: 700;
 		line-height: 1.15em;
 		margin-bottom:30px;	
@@ -153,15 +154,15 @@
 		}	
 
 		@media ( max-width:414px ) {
-			font-size:40px;
+			font-size:30px;
 		}
 	}
 
 	p {
 		color:$white;
 		margin-bottom: 60px;
-		font-size:14px;
-		font-weight:100;
+		font-size:22px;
+		font-weight:400;
 		max-width:730px;
 		@include media-breakpoint-down(lg) {
 			margin-top: 20px;
@@ -171,6 +172,11 @@
 				display: none;
 			}
 		}
+	}
+
+	.head-btn {
+	    font-size: 18px;
+    	padding: 20px 50px;
 	}
 
 	.clock_sec{
@@ -200,14 +206,14 @@
 		text-transform: uppercase;
 		border:1px solid transparent;
 		font-size: 14px;
-		border-radius:20px;
+		border-radius:5px;
 		padding:12px 28px;
 		@include transition();
 		&:hover{
 			@extend .p1-gradient-bg;
 			color:#fff;
-			border:1px solid transparent;
 			cursor:pointer;
+			background-size: 110%;
 		} 
 
 
@@ -273,11 +279,23 @@
 			  	font-size:20px;
 			  	font-weight:600;
 			  	margin-top:30px;
+			  	-webkit-transition: all 0.4s ease-in-out 0s;
+				-moz-transition: all 0.4s ease-in-out 0s;
+				transition: all 0.4s ease-in-out 0s;
+			  }
+			  h2:hover{
+				  color: $primary-color;
 			  }
 			  p{
 			  	font-size:14px;
 			  	font-weight:300;
 			  	margin-top:8px;
+			  	-webkit-transition: all 0.4s ease-in-out 0s;
+				-moz-transition: all 0.4s ease-in-out 0s;
+				transition: all 0.4s ease-in-out 0s;
+			  }
+			  p:hover{
+				  color: $primary-color;
 			  }
 			  a{
 			  	font-size:14px;
@@ -301,7 +319,7 @@
 	}
 
 	.single-project{
-		
+		height: 330px;
 		.single-project .title{
 		  color: #1a1a1a;
 		  text-align: center;
@@ -310,13 +328,26 @@
 
 		.content {
 		  position: relative;
-		  max-width: 400px;
+		  width: 100%;
 		  margin: auto;
 		  overflow: hidden;
+		  height: 100%;
+
+		  img {
+		    position: absolute;
+		    top: 0;
+		    min-height: 100%;
+		    min-width: 100%;
+		    width: auto;
+		    height: 100%;
+		    left: 50%;
+		    transform: translateX(-50%);
+		    z-index: 1;
+		  }
 		}
 
 		.content .content-overlay {
-		  @extend .p1-gradient-bg;
+		  @extend .p2-gradient-bg;
 		  position: absolute;
 		  left: 0;
 		  top: 0;
@@ -326,6 +357,7 @@
 		  -webkit-transition: all 0.4s ease-in-out 0s;
 		  -moz-transition: all 0.4s ease-in-out 0s;
 		  transition: all 0.4s ease-in-out 0s;
+		  z-index: 3;
 		  @media(max-width:767px) {
 				left:20px;
 				width:90%;
@@ -359,6 +391,7 @@
 		  -webkit-transition: all 0.3s ease-in-out 0s;
 		  -moz-transition: all 0.3s ease-in-out 0s;
 		  transition: all 0.3s ease-in-out 0s;
+		  z-index: 4;
 		}
 
 		.content-title{
@@ -392,11 +425,11 @@
 //--------- start about Area -------------//
 
 
-.about-area{
+.feature-area-1{
 	background-color:#222;
 }
 
-.about-right{
+.feature-right{
 
 	padding-right:20%;
 	padding-left:5%;
@@ -415,6 +448,9 @@
 	h1{
 		color:$white;
 		margin-bottom:25px;
+	}
+	p{
+		color:$white;
 	}
 	.btn-black{
 		margin-top:30px;
@@ -442,12 +478,26 @@
 //--------- Start volunteer Area -------------//
 
 
-	.volunteer-area{
+	.feature-area-2{
 		background-color:$offwhite;	
 		.header-text{
-			text-align:center;
-			h1{
-				margin-bottom:25px;
+			h2{
+				margin:25px 0;
+			}
+			@include media-breakpoint-down(lg) {
+				h2{
+					font-size:25px;
+				}
+			}
+			a {
+				color: $title-color;
+				font-weight: 500;
+				-webkit-transition: all 0.4s ease-in-out 0s;
+				-moz-transition: all 0.4s ease-in-out 0s;
+				transition: all 0.4s ease-in-out 0s;
+			}
+			a:hover {
+				color: $primary-color;
 			}
 		}
 	}
@@ -551,20 +601,47 @@
 
 //--------- start donate Area -------------//
 
-.donate-area{
-background: url(../img/header-bg.jpg) no-repeat center center fixed; 
+.testimonial-area{
+background: url(../img/header-bg.png) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-	.overlay-bg {
-		opacity:.9;
-  		background-color: rgb(0, 0, 0);
-	}
-	.header-text{
-		h1{
-			color:#fff;
-			margin-bottom:25px;
+	.testimonial-content {
+		background-color: rgba(0, 0, 0, 0.5);
+		padding: 50px 80px 50px 130px;
+		position: relative;
+		@media(max-width:414px) {
+			padding: 70px 30px 30px 30px;
+			img {
+			    left: 31px!important;
+			    top: 30px!important;
+			}
+			p {
+				font-size: 22px!important;
+			}
+			span {
+				font-size: 14px!important;
+			}
+		}
+		img {
+			width: 35px;
+			position: absolute;
+	    	left: 50px;
+	    	top: 63px;
+		}
+		p {
+			color: $white;
+		    font-size: 40px;
+		    line-height: normal;
+		    font-weight: 200;
+		}
+		span {
+			color: $white;
+    		font-size: 20px;
+    		i {
+    			color: $white;
+    		}
 		}
 	}
 
@@ -647,11 +724,12 @@ background: url(../img/header-bg.jpg) no-repeat center center fixed;
 }
 
 .footer-social{
-	padding-bottom:30px;
+	padding-bottom:10px;
 	a{
 		padding:15px;
 		i{
-			color:#ccc;
+			color:#0077B5;
+			font-size: 20px;
 			@include transition();
 			&:hover{
 				color:$primary-color;

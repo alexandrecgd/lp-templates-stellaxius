@@ -8,6 +8,19 @@ body {
 	left: 0;
 	width: 100%;
 	z-index: 9;
+	.container {
+		.header-wrap{
+			.header-top{
+				.logo{
+					img {
+						@media ( max-width:414px ) {
+							max-width: 225px;
+						}
+					}
+				}
+			}
+		}
+	}
 }
 .menu-bar {
 	cursor: pointer;
@@ -27,7 +40,7 @@ nav {
 		right: 0;
 		top: 47px;
 		text-align: right;
-		padding: 20px 0;
+		padding: 10px 0;
 		z-index: 5;
 		background: $white;
 		a{
